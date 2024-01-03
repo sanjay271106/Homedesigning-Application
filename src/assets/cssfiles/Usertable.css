@@ -1,0 +1,46 @@
+.utab {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  td, th {
+    border-bottom: 1px solid rgba(177, 175, 175, 0.688);
+    text-align: center;
+    /* padding: 7px; */
+    font-size: 20px;
+  }
+  tr:hover {
+    background-color: rgb(45, 44, 44);
+    color:rgb(28, 205, 28)
+}
+
+  th {
+    background-color: rgba(1, 1, 1, 0.973);
+    height: 60px;
+    color: beige;
+  }
+  
+  .table1 {
+    display:flex;
+    margin-top: 7%;
+    justify-content: center;
+    /* */
+  }
+
+  .table{
+    width: 10px;
+    border-radius: 50%;
+    background-color: black;
+    /* height: 40px; */
+    margin-top: 5%;
+    padding-left: 14px;
+    padding-right: 38px;
+  }
+
+tr {
+    background-color:beige;
+}
+
+
+

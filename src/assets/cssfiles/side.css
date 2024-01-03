@@ -1,0 +1,33 @@
+
+.sidepanel {
+    display: inline block; 
+    position:absolute;
+}
+.menu {
+    margin-top:-90px;
+    margin-left:10px;
+    background-color: white;
+    font-size:40px;
+   
+}
+
+.sidepanel button{
+    background-color: white;
+    color:black;
+    outline: none;
+    border: none;
+    width: 93%;
+    margin-left: 5px;
+    border-radius: 5px;
+    height:60px;
+    padding-right: 240px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform:none;
+    padding-left: 10px;
+    text-align:left;
+  }
+
+  .sidepanel button:hover {
+    background-color:rgb(187, 186, 186);
+  }

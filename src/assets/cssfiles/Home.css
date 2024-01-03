@@ -1,0 +1,63 @@
+ .body1 {
+    height: 200vh;
+    /* margin-top:100px; */
+ }  
+ .image1 {
+    height:600px;
+    width:85%;
+    border-radius:10px;
+    margin-left: 110px;
+    margin-top:40px
+ }
+
+ /* .par {
+   display: flex;
+   align-content: center;
+   justify-content: center;
+ } */
+ .why-homelane {
+   margin-top: 70px;
+   display:flex;
+   justify-content:center;
+   align-items: center;
+   margin-left: -300px;
+}
+
+.h-icons {
+   gap:20%;
+   display:flex;
+   justify-content:space-between;
+   align-items: center;
+}
+
+.h-title{
+    height: 90px;
+   padding-left: 300px;
+   font-size: 40px;
+}
+
+.hic {
+   height: 150px;
+}
+.hic1 {
+   height: 250px;
+   width: 330px;
+   border-radius: 10px;
+   cursor:pointer;
+}
+.h2-icons {
+   gap:2rem;
+   display:flex;
+   align-items: center;
+   margin-left: 50px;
+
+}
+.h2-title{
+   height: 90px;
+   padding-left:50px;
+   font-size: 40px;
+}
+.caro1 {
+   margin-top: 60px;
+}
+
