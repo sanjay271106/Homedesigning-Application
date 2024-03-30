@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "username": "anis",
-      "email": "22cse.shaikhanis.s@skct.edu.in",
-      "password": "12345678",
-      "id": 7
-    },
-    {
       "username": "sanjayakash",
       "email": "22it.kishore.s@skct.edu.in",
       "password": "1211",
@@ -17,6 +11,24 @@
       "email": "124@g",
       "password": "111",
       "id": 12
+    },
+    {
+      "username": "sanjay",
+      "email": "22cse.sanjay.r@skct.edu.in",
+      "password": "sanjay@1106",
+      "id": 13
+    },
+    {
+      "username": "sanjayakash",
+      "email": "sanjayraghuraman11@gmail.com",
+      "password": "sanjay@1106",
+      "id": 14
+    },
+    {
+      "username": "thrisha",
+      "email": "csebgirls8@gmail.com",
+      "password": "Thrisha",
+      "id": 15
     }
   ]
 }
