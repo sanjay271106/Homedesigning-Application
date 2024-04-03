@@ -6,7 +6,9 @@
 } */
 
 .mainbody {
-	background: #f6f5f7; 
+	/* background: #f6f5f7; */
+	background-color: #f6f5f7; 
+	/* background-image: linear-gradient( 184.1deg,  rgba(249,255,182,1) 44.7%, rgba(226,255,172,1) 67.2% ); */
 	height: 100vh;
 }
 .body {
@@ -17,7 +19,7 @@
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 90vh;
-	
+	font-size: 1.3rem;
 }
 
 h1 {
@@ -30,7 +32,7 @@ h2 {
 }
 
 p {
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: 100;
 	line-height: 20px;
 	letter-spacing: 0.5px;
@@ -38,7 +40,7 @@ p {
 }
 
 span {
-	font-size: 15px;
+	font-size: 20px;
 }
 
 a {
@@ -102,11 +104,13 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 850px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 530px;
 }
-
+.inp {
+	border: 0.7px solid black;
+}
 .form-container {
 	position: absolute;
 	top: 0;
@@ -117,4 +121,8 @@ input {
 	margin-left: 97%;
     cursor: pointer;
     text-align: center;
+}
+
+.social {
+	height:35%;
 }

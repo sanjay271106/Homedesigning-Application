@@ -10,7 +10,7 @@
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	
+	/* background-color: aqua; */
 }
 
 h1 {
@@ -126,7 +126,7 @@ input {
     background-repeat: no-repeat;
 	background-size: contain;
 	height:600px;
-	width: 390px;
+	width: 450px;
 }
 .social-container {
 	margin: 20px 0;
@@ -139,10 +139,13 @@ input {
 	justify-content: center;
 	align-items: center;
 	margin: 0 5px;
-	height: 40px;
-	width: 40px;
+	height: 50px;
+	width: 50px;
 } 
-
+.social-container a:hover {
+	background-color: black;
+	color: #fff;
+}
 .sign a{
 	color:blue;
 	text-decoration:underline;

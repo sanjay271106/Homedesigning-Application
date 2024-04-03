@@ -1,36 +1,41 @@
 import {  FaBackward, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import img1 from '../assets/images/signin.jpg';
 import {useNavigate} from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
+import axios from "axios";
+import React,{useState} from 'react';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import {X} from 'lucide-react'
+
 const Login =()=> {
     const navigate = useNavigate();
     const handleRegister =()=> {
      navigate('/Register')
-   };
+    };
+    const handleDash =()=>{
+     navigate('/Dash')
+    } 
     const handleHome =()=> {
      navigate('/')
-   };
-    const handle =()=> {
-        toast.success('Login successful!', {
-            position: 'bottom-right',
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "colored",
-            onClose: () => {},
-          });   
-    const handleDash =()=>{
-        navigate('/Dash')
-    }
-    setTimeout(() => {
-     handleDash();
-     }, 3000);
-   };
+    };
+const [data,setData] = useState({
+    username:'',
+    password:''
+})
+
+const handleChange=(e)=>
+{
+    setData({...data,[e.target.id]:e.target.value})
+}
+
+const handleSubmit=async(e)=>
+{
+    e.preventDefault();
+    await axios.get('http://localhost:8080/login' , data)
+    console.log(data)
+    handleDash();
+}
+
 
     return(
         <>
@@ -40,7 +45,7 @@ const Login =()=> {
         <div class="container" id="container">
            
             <div class="form-container sign-in-container">
-                <form action="#" onSubmit={handle}>
+                <form action="#" onSubmit={handleSubmit}>
                     <h1>Sign in</h1>
                     <div class="social-container">
                         <a href="#" class="social"><FaInstagram/></a>
@@ -48,8 +53,8 @@ const Login =()=> {
                         <a href="#" class="social"><FaLinkedin/></a>
                     </div>
                     <span>or use your account</span>
-                    <input type="text" placeholder="Username" required/>
-                    <input type="password" placeholder="Password" required/>
+                    <input type="text" placeholder="Username" required onChange={handleChange} className="inp"/>
+                    <input type="password" placeholder="Password" required onChange={handleChange} className="inp"/>
                     <a href="#">Forgot your password?</a>
                     <button>Sign In</button>
                     <h6>or</h6>
@@ -57,7 +62,7 @@ const Login =()=> {
                     <h6>Don't have an account? <a className='sign' href='#' onClick={handleRegister}>signup</a></h6>
                     </div>
                 </form>
-                <ToastContainer />
+                
             </div>
             <div class="overlay-container">
                 <div class="images">
