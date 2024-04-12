@@ -1,21 +1,27 @@
 package com.example.home.model;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"username", "email"})})
+
 public class User {
     @Id
-    @GeneratedValue
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
-
+    @Column
     private String username;
+    @Column
     private String email;
+
     private String password;
+    @OneToOne(mappedBy = "user" ,cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private Data data;
     public User(){
 
     }
@@ -50,6 +56,15 @@ public class User {
         this.password = password;
     }
 
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<Design> design=new ArrayList<>();
+    public List<Design> getdesign() {
+        return design;
+    }
+    public void setdesign(List<Design> design) {
+        this.design = design;
+    }
 
 }
 
