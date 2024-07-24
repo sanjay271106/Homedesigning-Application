@@ -2,8 +2,9 @@ import { Home ,Info, LayoutGrid, LogOut, Mail, Settings, UserCog } from 'lucide-
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import Admin from './Admin';
+// import {Props} from React;
 
-const Dash =()=> {
+const Dash =(props)=> {
     const navigate = useNavigate();
     const handleAdmin =()=> {
      navigate('/Admin')
@@ -74,7 +75,7 @@ const Dash =()=> {
             </div>
            </div>
            <div class="content2">
-              {/* <h2>User Dashboard Content</h2> */}
+              <h2>Welcome {props.detail.username}</h2>
               {sam?(<Admin/>):(<></>)}
                
            </div>

@@ -29,7 +29,7 @@ const Register =()=> {
     const handleSubmit=async(e)=>
     {
         e.preventDefault();
-        await axios.post('http://localhost:8080/register' , data)
+        // await axios.post('http://localhost:8080/register' , data)
         console.log(data)
         handleHome();
     }
@@ -51,7 +51,7 @@ const Register =()=> {
             <form action="#" onSubmit={handleSubmit}>
                 <h1>Create New</h1>
                     <div class="social-container">
-                        <a href="#" class="social"><FaGooglePlusG/></a>
+                        <a href="" class="social"><FaGooglePlusG/></a>
                         <a href="#" class="social"><FaFacebook/></a>
                         <a href="#" class="social"><FaLinkedin/></a>
                     </div>

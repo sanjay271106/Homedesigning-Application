@@ -6,6 +6,7 @@ import React,{useState} from 'react';
 // import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {X} from 'lucide-react'
+import Dash from "../pages/Dash";
 
 const Login =()=> {
     const navigate = useNavigate();
@@ -18,25 +19,29 @@ const Login =()=> {
     const handleHome =()=> {
      navigate('/')
     };
-const [data,setData] = useState({
-    username:'',
-    password:''
-})
+    const [data,setData] = useState({
+        username:'',
+        password:''
+    })
+    // const data = {
+    //     username:"sanjay",
+    //     password:123
+    // }
 
-const handleChange=(e)=>
-{
-    setData({...data,[e.target.id]:e.target.value})
-}
+    const handleChange=(e)=>
+    {
+       setData({...data,[e.target.id]:e.target.value})
+    }
 
-const handleSubmit=async(e)=>
-{
-    e.preventDefault();
-    await axios.get('http://localhost:8080/login' , data)
-    console.log(data)
-    handleDash();
-}
-
-
+    const handleSubmit=async(e)=>
+    {
+        e.preventDefault();
+        // await axios.get('http://localhost:8080/login' , data)
+        console.log(data)
+        handleDash();
+    }
+    
+    
     return(
         <>
         <div className="mainbody">
@@ -53,8 +58,8 @@ const handleSubmit=async(e)=>
                         <a href="#" class="social"><FaLinkedin/></a>
                     </div>
                     <span>or use your account</span>
-                    <input type="text" placeholder="Username" required onChange={handleChange} className="inp"/>
-                    <input type="password" placeholder="Password" required onChange={handleChange} className="inp"/>
+                    <input type="text" id="username" placeholder="Username" required onChange={handleChange} className="inp"/>
+                    <input type="password" id="password" placeholder="Password" required onChange={handleChange} className="inp"/>
                     <a href="#">Forgot your password?</a>
                     <button>Sign In</button>
                     <h6>or</h6>
@@ -72,6 +77,8 @@ const handleSubmit=async(e)=>
         </div>
         
         </div>
+        {/* <Dash detail = {data}/> */}
+
         </div>
         </>
     )
